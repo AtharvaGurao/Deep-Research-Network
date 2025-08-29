@@ -1,0 +1,286 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Deep Research Network Design System */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+    
+    --sidebar: 0 0% 98%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-accent: 0 0% 96%;
+    
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+    
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 46%;
+    
+    --accent: 0 0% 94%;
+    --accent-foreground: 0 0% 9%;
+    
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 217 91% 60%;
+    
+    --progress-bg: 0 0% 94%;
+    --progress-fill: 217 91% 60%;
+    
+    --openai: 0 0% 9%;
+    --perplexity: 0 0% 9%;
+    --groq: 34 97% 64%;
+    --gemini: 217 91% 60%;
+    
+    --radius: 0.75rem;
+    
+    /* Design System Variables */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans leading-relaxed;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Typography Scale */
+  h1 {
+    @apply text-4xl md:text-5xl font-bold tracking-tight leading-tight;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight leading-tight;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl font-semibold leading-tight;
+  }
+  
+  h4 {
+    @apply text-lg font-semibold leading-snug;
+  }
+  
+  p {
+    @apply text-base leading-relaxed;
+  }
+  
+  small {
+    @apply text-sm text-muted-foreground;
+  }
+}
+
+@layer components {
+  /* Animation Classes */
+  .typing-animation {
+    animation: typing 0.05s steps(1) infinite;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Interactive Elements */
+  .hover-lift {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Button Variants */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 focus:ring-2 focus:ring-primary/20 px-4 py-2 rounded-lg font-medium transition-all duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-700 hover:bg-gray-200 focus:ring-2 focus:ring-gray-300/20 px-4 py-2 rounded-lg font-medium transition-all duration-200;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent hover:bg-gray-100 focus:ring-2 focus:ring-gray-300/20 px-4 py-2 rounded-lg font-medium transition-all duration-200;
+  }
+  
+  /* Card Components */
+  .card {
+    @apply bg-card border border-border rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200;
+  }
+  
+  .card-compact {
+    @apply bg-card border border-border rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-200;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    background: linear-gradient(90deg, hsl(var(--progress-fill)) 0%, hsl(var(--progress-fill)) var(--progress, 0%), hsl(var(--progress-bg)) var(--progress, 0%), hsl(var(--progress-bg)) 100%);
+    height: 2px;
+    border-radius: 1px;
+  }
+  
+  /* LLM Chips */
+  .llm-chip {
+    @apply inline-flex items-center gap-2 px-3 py-2 rounded-full border border-gray-200 bg-white text-sm font-medium transition-all duration-200 ease-out shadow-sm cursor-pointer hover:shadow-md;
+  }
+  
+  .llm-chip:hover {
+    @apply border-gray-300 bg-gray-50 transform scale-105;
+  }
+  
+  .llm-chip.selected {
+    @apply border-blue-500 bg-blue-50 text-blue-700 shadow-md;
+  }
+  
+  .llm-chip.selected:hover {
+    @apply border-blue-600 bg-blue-100 shadow-lg;
+  }
+  
+  /* Expert Cards */
+  .expert-card {
+    @apply p-6 border border-border rounded-xl bg-card hover-lift cursor-pointer transition-all duration-200;
+  }
+  
+  .expert-card.selected {
+    @apply border-primary bg-primary/5 shadow-md;
+  }
+
+  /* LLM Result Card Hover Effects */
+  .llm-result-card {
+    @apply transition-all duration-300 ease-out;
+    max-width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .llm-result-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  /* LLM Results Grid Hover Effects */
+  .llm-results-grid {
+    position: relative;
+    overflow: visible;
+  }
+
+  .llm-results-grid:hover .llm-result-card:not(:hover):not(:focus) {
+    opacity: 0.4;
+    transform: scale(0.98);
+    transition: all 300ms ease-out;
+  }
+
+  .llm-results-grid .llm-result-card:hover,
+  .llm-results-grid .llm-result-card:focus {
+    position: relative;
+    z-index: 30;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
+  }
+
+  /* Enhanced readability on hover */
+  .llm-result-card:hover .max-w-none,
+  .llm-result-card:focus .max-w-none {
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  /* Custom scrollbar for LLM cards */
+  .llm-result-card::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .llm-result-card::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .llm-result-card::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+  
+  .llm-result-card::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  /* Input Styling */
+  .input-field {
+    @apply w-full px-4 py-3 bg-gray-100 border-0 rounded-2xl text-sm placeholder:text-gray-500 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all duration-200;
+  }
+  
+  /* Layout Spacing */
+  .section-spacing {
+    @apply py-8 md:py-12;
+  }
+  
+  .container-padding {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+  
+  /* Responsive Grid */
+  .grid-responsive {
+    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-6;
+  }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .llm-results-grid:hover .llm-result-card:not(:hover):not(:focus) {
+      opacity: 0.4;
+      transform: none;
+      transition: opacity 300ms ease-out;
+    }
+    
+    .llm-result-card {
+      transition: none;
+    }
+    
+    .hover-lift:hover {
+      transform: none;
+    }
+    
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Logo Animation */
+  .logo-click-animation {
+    animation: logoClick 0.6s ease-in-out;
+  }
+
+  @keyframes logoClick {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+}
