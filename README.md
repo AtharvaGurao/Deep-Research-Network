@@ -1,73 +1,103 @@
-# Welcome to your Lovable project
+# Deep Research Network
 
-## Project info
+A powerful platform for conducting in-depth research by connecting with domain experts and leveraging AI-powered insights.
 
-**URL**: https://lovable.dev/projects/1d289a7e-61b5-4ee2-813a-775cd2765c76
+## 🌟 Features
 
-## How can I edit this code?
+- **Expert Network**: Connect with industry professionals across various domains
+- **AI-Powered Research**: Get comprehensive answers to complex research questions
+- **Expert Q&A**: Send questions directly to selected experts
+- **AI Interviewer**: Automate expert interviews with AI
+- **Collaborative Research**: Combine insights from multiple experts and AI models
+- **Responsive Design**: Works seamlessly across desktop and mobile devices
 
-There are several ways of editing your application.
+## 🚀 Quick Start
 
-**Use Lovable**
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/AtharvaGurao/Deep-Research-Network.git
+   cd deep-expert-harmony-main
+   ```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1d289a7e-61b5-4ee2-813a-775cd2765c76) and start prompting.
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-Changes made via Lovable will be committed automatically to this repo.
+3. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-**Use your preferred IDE**
+4. **Open your browser**
+   ```
+   http://localhost:3000
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **State Management**: React Query
+- **UI Components**: Custom components with Radix UI primitives
+- **Routing**: React Router
+- **Icons**: Lucide Icons
+- **Build Tool**: Vite
 
-Follow these steps:
+## 📂 Project Structure
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/       # Reusable UI components
+├── pages/           # Page components
+├── utils/           # Utility functions and helpers
+├── App.tsx          # Main application component
+└── main.tsx         # Application entry point
 ```
 
-**Edit a file directly in GitHub**
+## 🔍 How It Works
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. **Submit a Research Query**
+   - Enter your research question or topic
+   - Select relevant domains or industries
 
-**Use GitHub Codespaces**
+2. **Review AI-Generated Insights**
+   - Get comprehensive analysis from multiple AI models
+   - Explore different perspectives on your topic
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+3. **Engage with Experts**
+   - Browse and select domain experts
+   - Send questions directly or schedule calls
+   - Use AI Interviewer for automated expert interviews
 
-## What technologies are used for this project?
+4. **Combine Insights**
+   - Aggregate findings from multiple sources
+   - Generate comprehensive research reports
 
-This project is built with:
+## 🤝 Contributing
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Contributions are welcome! Please follow these steps:
 
-## How can I deploy this project?
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-Simply open [Lovable](https://lovable.dev/projects/1d289a7e-61b5-4ee2-813a-775cd2765c76) and click on Share -> Publish.
+## 📄 License
 
-## Can I connect a custom domain to my Lovable project?
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Yes, you can!
+## 🙏 Acknowledgments
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- Built with ❤️ by [Your Name]
+- Special thanks to all contributors and open-source projects that made this possible
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+
+<div align="center">
+  Made with React & TypeScript
+</div>
