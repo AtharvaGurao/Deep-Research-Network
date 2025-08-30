@@ -77,24 +77,8 @@ src/
    - Aggregate findings from multiple sources
    - Generate comprehensive research reports
 
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 
-
-## 🙏 Acknowledgments
-
-- Built with ❤️ by Atharva Gurao
-- Special thanks to all contributors and open-source projects that made this possible
-
----
 
 <div align="center">
   Made with React & TypeScript
